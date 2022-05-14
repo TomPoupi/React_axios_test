@@ -1,12 +1,14 @@
-import { StrictMode } from "react";
+
+import { BrowserRouter } from 'react-router-dom';
 import ReactDOM from "react-dom";
-import HomePage from "./App";
+import App from "./App";
 
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
-  <StrictMode>
-    <HomePage />
-  </StrictMode>,
-  rootElement
+//<StrictMode> : ne marche pas avec hookrouter
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>,
+    rootElement
 );
